@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Maze Generator & Solver</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Maze Generator & Solver</h1>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="size">Maze Size:</label>
+                    <select id="size">
+                        <option value="10">10x10</option>
+                        <option value="15">15x15</option>
+                        <option value="20" selected>20x20</option>
+                        <option value="30">30x30</option>
+                        <option value="40">40x40</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <button id="generate-btn">Generate New Maze</button>
+                </div>
+
+                <div class="control-group">
+                    <label for="algorithm">Solve Algorithm:</label>
+                    <select id="algorithm">
+                        <option value="dfs">Depth-First Search</option>
+                        <option value="bfs">Breadth-First Search</option>
+                        <option value="astar">A* Algorithm</option>
+                    </select>
+                    <button id="solve-btn">Solve Maze</button>
+                </div>
+
+                <div class="control-group">
+                    <button id="play-btn">Play Maze</button>
+                    <span id="timer">Time: 0.0s</span>
+                </div>
+            </div>
+
+            <div class="status">
+                <p id="status-text">Ready to generate maze.</p>
+            </div>
+
+            <div class="maze-container">
+                <canvas id="maze-canvas"></canvas>
+            </div>
+
+            <div class="instructions">
+                <h3>Instructions:</h3>
+                <p>Generate a maze using the button above.</p>
+                <p>
+                    Solve it automatically with different algorithms or play it
+                    yourself.
+                </p>
+                <p>
+                    When in play mode, use arrow keys to navigate from start
+                    (green) to end (red).
+                </p>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
